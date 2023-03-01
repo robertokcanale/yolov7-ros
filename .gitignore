@@ -1,6 +1,7 @@
-weights/yolov7x.pt
-weights/yolov7-e6e.pt
-weights/yolov7-w6.pt
-
-*.pyc
-
+scripts/utils/__pycache__
+scripts/models/__pycache__
+yolov7_ros/utils/__pycache__
+yolov7_ros/models/__pycache__
+yolov7_ros/models/models/__pycache__
+yolov7_ros/__pycache__
+weights/yolov7-w6-pose.pt

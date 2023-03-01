@@ -18,19 +18,19 @@ Following ROS packages are required:
 - [shape_msgs](http://wiki.ros.org/shape_msgs)
 - [message_generation](http://wiki.ros.org/message_generation)
 - [actionlib_msgs](http://wiki.ros.org/actionlib_msgs)
-Yo can install them with:
+You can install them with:
 ```
-sudo apt-get install ros-noetic-vision-msgs
-sudo apt-get install ros-noetic-geometry-msgs
-sudo apt-get install ros-noetic-shape-msgs
-sudo apt-get install ros-noetic-message-generation
-sudo apt-get install ros-noetic-actionlib-msgs
+sudo apt-get install ros-galctic-vision-msgs
+sudo apt-get install ros-galctic-geometry-msgs
+sudo apt-get install ros-galctic-shape-msgs
+sudo apt-get install ros-galctic-message-generation
+sudo apt-get install ros-galctic-actionlib-msgs
 ```
 First, clone the repo into your catkin workspace and build the package:
 ```
-git clone https://github.com/robertokcanale/yolov7-ros.git ~/catkin_ws/src/
-cd ~/catkin_ws
-catkin build yolov7_ros
+git clone https://github.com/robertokcanale/yolov7-ros.git ~/ros2_ws/src/
+cd ~/colcon_ws
+colcon build
 ```
 
 The Python requirements are listed in the `requirements.txt`. You can simply 
@@ -51,7 +51,7 @@ YOLOv7 weights and the image topic to which this node should listen to. The laun
 file also contains a description for each parameter.
 
 ```
-roslaunch yolov7_ros yolov7.launch
+ros2 launch yolov7_ros yolov7.launch.py
 ```
 
 ## YOLOv7 Human Pose Estimation
@@ -63,7 +63,7 @@ You can download the weights from the official repo or here:
 https://drive.google.com/file/d/1Khl44NDNp2bpQMWWN-hvfc258SGx_QtV/view?usp=sharing
 
 ```
-rosrlaunch yolov7_ros yolov7_hpe.launch
+ros2 launch yolov7_ros yolov7_hpe.launch.py
 ```
 
 Each time a new image is received it is then fed into YOLOv7.
@@ -73,5 +73,3 @@ Each time a new image is received it is then fed into YOLOv7.
 - If you set the `visualize` parameter to `true`, the detections will be drawn into 
   the image, which is then published under `/yolov7/out_topic/visualization`.
 
-## Coming Soon
-- ROS2 implementation
