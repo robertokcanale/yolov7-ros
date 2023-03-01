@@ -1,6 +1,6 @@
-# ROS package for official YOLOv7
+# ROS2 package for official YOLOv7
 
-This repo contains a ROS noetic package for the official YOLOv7. It wraps the 
+This repo contains a ROS Galactic package for the official YOLOv7. It wraps the 
 [official implementation](https://github.com/WongKinYiu/yolov7) into a ROS node (so most credit 
 goes to the YOLOv7 creators).
 
